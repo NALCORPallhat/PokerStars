@@ -21,7 +21,7 @@ public class PokerStars {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanIn =  null;
+        Scanner scanIn = null;
         String inputString = null;
         System.out.println("POKER STARS");
         try {
@@ -35,18 +35,22 @@ public class PokerStars {
                 while (true) {
                     try {
                         N = Integer.parseInt(inputString);
-                        if(N>=10){
+                        if (N >= 10) {
                             System.out.println("Ingrese el n\u00famero de jugadores (Debe ser menor o igual a 10): ");
                             inputString = scanIn.nextLine();
                             continue;
                         }
-                        if(N==1){
+                        if (N == 1) {
                             System.out.println("Ingrese el n\u00famero de jugadores (Debe ser mayor a 1): ");
                             inputString = scanIn.nextLine();
                             continue;
                         }
                         break;
                     } catch (NumberFormatException e) {
+                        System.out.println("Ingrese un n\u00famero de jugadores v\u00e1lido (Debe ser menor o igual a 10 y mayor a 1): ");
+                        inputString = scanIn.nextLine();
+                        continue;
+
                     }
                 }
                 Juego juego = new Juego();
