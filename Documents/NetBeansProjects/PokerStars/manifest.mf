@@ -3,5 +3,5 @@ Ant-Version: Apache Ant 1.9.7
 Created-By: 1.8.0_121-b13 (Oracle Corporation)
 Class-Path: 
 X-COMMENT: Main-Class will be added automatically by build
-Main-Class: cl.com.thoughtworks.conferencia.Main
+Main-Class: cl.com.ict.pokerstars.PokerStars
 
