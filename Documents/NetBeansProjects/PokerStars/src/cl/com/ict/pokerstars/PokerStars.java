@@ -21,12 +21,21 @@ public class PokerStars {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Scanner scanIn = null;
+        Scanner scanIn =new Scanner(System.in);
         String inputString = null;
         System.out.println("POKER STARS");
-        try {
+        System.out.println("¿Desea comenzar una partida? (S-s para Si | N-n para No): ");
+        String respuesta = scanIn.nextLine();
+        while (true) {
+            if (respuesta.toUpperCase().compareTo("S") == 0 || respuesta.toUpperCase().compareTo("N") == 0) {
+                break;
+            }
+            System.out.println("Debe ingresar un valor valido ¿Desea comenzar una partida? (S-s para Si | N-n para No): ");
+            respuesta = scanIn.nextLine();
+
+        }
+        while (respuesta.toUpperCase().compareTo("S") == 0) {
             // creates a console object
-            scanIn = new Scanner(System.in);
             if (scanIn != null) {
                 // read line from the user input
                 System.out.println("Ingrese el n\u00famero de jugadores (Debe ser menor o igual a 10 y mayor a 1): ");
@@ -71,10 +80,17 @@ public class PokerStars {
                 System.out.println("El jugador gandaor fu\u00e9: " + juego.getGanador().getNombre());
                 System.out.println("Y gan\u00f3 con la jugada: " + juego.getJugadaGanadora().getNombre());
             }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+            System.out.println("¿Desea jugar otra partida? (S-s para Si | N-n para No): ");
+            respuesta = scanIn.nextLine();
+            while (true) {
+                if (respuesta.toUpperCase().compareTo("S") == 0 || respuesta.toUpperCase().compareTo("N") == 0) {
+                    break;
+                }
+                System.out.println("Debe ingresar un valor valido ¿Desea jugar otra partida? (S-s para Si | N-n para No): ");
+                respuesta = scanIn.nextLine();
 
+            }
+        }
     }
 
 }
