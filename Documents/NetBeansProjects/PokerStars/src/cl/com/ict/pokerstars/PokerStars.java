@@ -29,19 +29,19 @@ public class PokerStars {
             scanIn = new Scanner(System.in);
             if (scanIn != null) {
                 // read line from the user input
-                System.out.println("Ingrese el número de jugadores (Debe ser menor o igual a 10 y mayor a 1): ");
+                System.out.println("Ingrese el n\u00famero de jugadores (Debe ser menor o igual a 10 y mayor a 1): ");
                 inputString = scanIn.nextLine();
                 int N = 0;
                 while (true) {
                     try {
                         N = Integer.parseInt(inputString);
                         if(N>=10){
-                            System.out.println("Ingrese el número de jugadores (Debe ser menor o igual a 10): ");
+                            System.out.println("Ingrese el n\u00famero de jugadores (Debe ser menor o igual a 10): ");
                             inputString = scanIn.nextLine();
                             continue;
                         }
                         if(N==1){
-                            System.out.println("Ingrese el número de jugadores (Debe ser mayor a 1): ");
+                            System.out.println("Ingrese el n\u00famero de jugadores (Debe ser mayor a 1): ");
                             inputString = scanIn.nextLine();
                             continue;
                         }
@@ -64,10 +64,8 @@ public class PokerStars {
                         System.out.println(baraja.muestrarInfoCartas(carta));
                     }
                 }
-
-                System.out.println("El jugador gandor fue: " + juego.getGanador());
-                System.out.println("El jugador gandor fue: " + juego.getGanador().getNombre());
-                System.out.println("Y gano con la jugada: " + juego.getJugadaGanadora().getNombre());
+                System.out.println("El jugador gandaor fu\u00e9: " + juego.getGanador().getNombre());
+                System.out.println("Y gan\u00f3 con la jugada: " + juego.getJugadaGanadora().getNombre());
             }
         } catch (Exception ex) {
             ex.printStackTrace();

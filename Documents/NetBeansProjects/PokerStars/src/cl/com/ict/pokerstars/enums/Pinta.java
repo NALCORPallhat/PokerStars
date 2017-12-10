@@ -13,7 +13,7 @@ public enum Pinta  {
     
     Pica("Picas",1),
     Corazon("Corazones",2),
-    Trebol("Tréboles",3),
+    Trebol("Tr\u00e9boles",3),
     Diamante("Diamantes",4);
     
     private String nombre;
